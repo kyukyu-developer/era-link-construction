@@ -506,8 +506,28 @@
     grid-template-columns: 1fr;
   }
 
-  .vm-left { padding: 36px 24px; }
+  .vm-left {
+    padding: 36px 20px;
+  }
+
   .vm-header h2 { font-size: 26px; }
+
+  .vm-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 24px 20px;
+
+    h3 { font-size: 16px; }
+    p  { font-size: 13px; }
+  }
+
+  .vm-icon-wrap {
+    width: 44px;
+    height: 44px;
+
+    i { font-size: 18px; }
+  }
 
   .features-grid {
     grid-template-columns: 1fr;
