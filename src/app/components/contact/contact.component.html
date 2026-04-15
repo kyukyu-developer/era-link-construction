@@ -67,8 +67,19 @@
           <textarea [(ngModel)]="formData.message" name="message" rows="5"
                     placeholder="Tell us about your project..." required></textarea>
         </div>
-        <button type="submit" class="btn-primary">
-          Send Message <i class="fas fa-paper-plane"></i>
+        @if (isSuccess) {
+          <div class="form-success">
+            <i class="fas fa-check-circle"></i> Message sent! We'll get back to you within 24 hours.
+          </div>
+        }
+        @if (isError) {
+          <div class="form-error">
+            <i class="fas fa-exclamation-circle"></i> Failed to send. Please try again or email us directly.
+          </div>
+        }
+        <button type="submit" class="btn-primary" [disabled]="isSending">
+          {{ isSending ? 'Sending...' : 'Send Message' }}
+          <i class="fas fa-paper-plane"></i>
         </button>
       </form>
     </div>
