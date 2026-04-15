@@ -1,0 +1,89 @@
+<section class="about" id="about">
+
+  <!-- ── INTRO: full-bleed split ── -->
+  <div class="about-split">
+    <div class="about-split-content scroll-animate from-left" appScrollAnimate>
+      <span class="section-tag">About Us</span>
+      <h2>About Our <span>Company</span></h2>
+      <p class="lead">To systematically and beautifully organize the nation's urban planning, ERA LINK Company was established.</p>
+      <p class="desc">Our company provides precise and reliable services in building design drafting, construction, supervision, and quality inspection and maintenance. The role of engineers in construction systems and operational methods has become extremely important to ensure durability, beauty, and resilience against disasters.</p>
+      <ul class="check-list">
+        <li class="scroll-animate delay-1" appScrollAnimate><i class="fas fa-check-circle"></i> Expert Engineering Team</li>
+        <li class="scroll-animate delay-2" appScrollAnimate><i class="fas fa-check-circle"></i> DICA Certified &amp; Licensed</li>
+        <li class="scroll-animate delay-3" appScrollAnimate><i class="fas fa-check-circle"></i> Quality Assured Construction</li>
+        <li class="scroll-animate delay-4" appScrollAnimate><i class="fas fa-check-circle"></i> On-Time Project Delivery</li>
+      </ul>
+    </div>
+
+    <div class="about-split-image scroll-animate from-right" appScrollAnimate>
+      <img src="about-2.jpg" alt="ERA LINK construction" class="img-float">
+      <div class="dica-badge">
+        <i class="fas fa-certificate"></i>
+        <span>DICA<br>Certified</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── STATS BAND ── -->
+  <div class="stats-band">
+    @for (stat of stats; track stat.label; let i = $index) {
+      @if (i > 0) { <div class="stat-sep"></div> }
+      <div class="stat-item scroll-animate from-bottom delay-{{i + 1}}" appScrollAnimate>
+        <i [class]="stat.icon"></i>
+        <div>
+          <span class="stat-number" [attr.data-target]="stat.value" [attr.data-suffix]="stat.suffix">
+            {{ stat.value }}{{ stat.suffix }}
+          </span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="container">
+
+    <!-- ── VISION & MISSION ── -->
+    <div class="vm-section">
+      <div class="vm-left scroll-animate from-left" appScrollAnimate>
+        <div class="vm-header">
+          <span class="section-tag">Our Foundation</span>
+          <h2>Vision &amp; <span>Mission</span></h2>
+        </div>
+        <div class="vm-card scroll-animate delay-1" appScrollAnimate>
+          <div class="vm-icon-wrap"><i class="fas fa-eye"></i></div>
+          <h3>Our Vision</h3>
+          <p>To provide clients with durable buildings that are accurately designed to withstand natural disasters, featuring innovative designs, systematic and precise workmanship, and competitive pricing, ensuring complete client satisfaction.</p>
+        </div>
+        <div class="vm-card mission scroll-animate delay-2" appScrollAnimate>
+          <div class="vm-icon-wrap"><i class="fas fa-bullseye"></i></div>
+          <h3>Our Mission</h3>
+          <p>To ensure strong and high-quality results, designs drafted by experienced engineers are supervised by senior engineers and executed step by step by skilled workers according to systematic construction methods, rules and regulations.</p>
+        </div>
+      </div>
+      <div class="vm-right scroll-animate from-right" appScrollAnimate>
+        <img src="about-1.png" alt="ERA LINK engineer">
+      </div>
+    </div>
+
+    <!-- ── WHY CHOOSE US ── -->
+    <div class="why-choose">
+      <div class="section-header scroll-animate" appScrollAnimate>
+        <span class="section-tag">Why Choose Us</span>
+        <h2>What Makes Us <span>Different</span></h2>
+      </div>
+      <div class="features-grid">
+        @for (feature of features; track feature.title; let i = $index) {
+          <div class="feature-card scroll-animate from-bottom delay-{{(i % 4) + 1}}" appScrollAnimate>
+            <span class="feature-num">{{ (i + 1).toString().padStart(2, '0') }}</span>
+            <div class="feature-icon">
+              <i [class]="feature.icon"></i>
+            </div>
+            <h4>{{ feature.title }}</h4>
+            <p>{{ feature.description }}</p>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+</section>

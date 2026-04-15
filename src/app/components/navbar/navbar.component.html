@@ -1,0 +1,25 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="container nav-container">
+    <a href="#home" class="logo">
+      <img src="logo.png" alt="ERA LINK Logo" class="logo-img">
+      <span>ERA <strong>LINK</strong></span>
+    </a>
+
+    <ul class="nav-links" [class.active]="isMobileMenuOpen">
+      @for (link of navLinks; track link.label) {
+        <li>
+          <a [href]="link.href" (click)="closeMobileMenu()">{{ link.label }}</a>
+        </li>
+      }
+      <li class="nav-cta">
+        <a href="#contact" class="btn-primary" (click)="closeMobileMenu()">Get Quote</a>
+      </li>
+    </ul>
+
+    <button class="hamburger" [class.active]="isMobileMenuOpen" (click)="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>

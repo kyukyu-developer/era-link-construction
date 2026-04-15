@@ -1,0 +1,16 @@
+<section class="stats">
+  <div class="stats-overlay"></div>
+  <div class="container">
+    <div class="stats-grid">
+      @for (stat of stats; track stat.label; let i = $index) {
+        <div class="stat-item scroll-animate delay-{{ i + 1 }}" appScrollAnimate>
+          <div class="stat-icon">
+            <i [class]="stat.icon"></i>
+          </div>
+          <div class="stat-value">{{ stat.value }}{{ stat.suffix }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

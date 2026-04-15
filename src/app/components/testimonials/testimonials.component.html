@@ -1,0 +1,48 @@
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header scroll-animate" appScrollAnimate>
+      <span class="section-tag">Testimonials</span>
+      <h2>What Our Clients <span>Say</span></h2>
+      <p>Don't just take our word for it - hear from our satisfied clients about their experience working with us.</p>
+    </div>
+
+    <div class="testimonial-slider scroll-animate" appScrollAnimate>
+      <div class="testimonial-track" [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
+        @for (testimonial of testimonials; track testimonial.name) {
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">{{ testimonial.text }}</p>
+            <div class="stars">
+              @for (star of [1,2,3,4,5]; track star) {
+                <i class="fas fa-star" [class.filled]="star <= testimonial.rating"></i>
+              }
+            </div>
+            <div class="testimonial-author">
+              <img [src]="testimonial.avatar" [alt]="testimonial.name">
+              <div>
+                <h4>{{ testimonial.name }}</h4>
+                <span>{{ testimonial.role }}</span>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="slider-controls">
+        <button class="slider-btn" (click)="prevSlide()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="slider-dots">
+          @for (testimonial of testimonials; track $index) {
+            <span class="dot" [class.active]="currentIndex === $index"></span>
+          }
+        </div>
+        <button class="slider-btn" (click)="nextSlide()">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

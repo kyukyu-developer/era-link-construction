@@ -1,0 +1,97 @@
+[
+  {
+    "image": "assets/projects/tender/ConcreteRoad_840_16_9/ConcreteRoad_840_16_9_cover.jpg",
+    "title": "Concrete Road (840'x16'x9\")",
+    "category": "tender",
+    "location": "Chan Mya Wati Ward, Monywa Township, Sagaing Region",
+    "description": "Tender Project - Client: Sagaing Region Development Affairs Organization",
+    "photos":[
+       "assets/projects/tender/ConcreteRoad_840_16_9/ConcreteRoad_840_16_9_01.jpg",
+       "assets/projects/tender/ConcreteRoad_840_16_9/ConcreteRoad_840_16_9_02.jpg",
+       "assets/projects/tender/ConcreteRoad_840_16_9/ConcreteRoad_840_16_9_03.jpg",
+       "assets/projects/tender/ConcreteRoad_840_16_9/ConcreteRoad_840_16_9_04.jpg",
+       "assets/projects/tender/ConcreteRoad_840_16_9/ConcreteRoad_840_16_9_05.jpg",
+       "assets/projects/tender/ConcreteRoad_840_16_9/ConcreteRoad_840_16_9_06.jpg",
+       "assets/projects/tender/ConcreteRoad_840_16_9/ConcreteRoad_840_16_9_07.jpg",
+       "assets/projects/tender/ConcreteRoad_840_16_9/ConcreteRoad_840_16_9_08.jpg"
+    ]
+  },
+  {
+    "image": "assets/projects/collaborative/PyiHtaungSuMarket/PyiHtaungSuMarket-Cover.jpg",
+    "title": "Steel Structure Building (80'x60')",
+    "category": "collaborative",
+    "location": "Pyi Htaung Su Market, Monywa Township, Sagaing Region",
+    "description": "Collaborative Project with Social Home 2024 - Client: Sagaing Region Development Affairs Organization",
+    "photos": [
+      "assets/projects/collaborative/PyiHtaungSuMarket/PyiHtaungSuMarket_01.jpg",
+      "assets/projects/collaborative/PyiHtaungSuMarket/PyiHtaungSuMarket_02.jpg",
+      "assets/projects/collaborative/PyiHtaungSuMarket/PyiHtaungSuMarket_03.jpg",
+      "assets/projects/collaborative/PyiHtaungSuMarket/PyiHtaungSuMarket_04.jpg",
+      "assets/projects/collaborative/PyiHtaungSuMarket/PyiHtaungSuMarket_05.jpg",
+      "assets/projects/collaborative/PyiHtaungSuMarket/PyiHtaungSuMarket_06.jpg",
+      "assets/projects/collaborative/PyiHtaungSuMarket/PyiHtaungSuMarket_07.jpg",
+      "assets/projects/collaborative/PyiHtaungSuMarket/PyiHtaungSuMarket_08.jpg",
+      "assets/projects/collaborative/PyiHtaungSuMarket/PyiHtaungSuMarket_09.jpg",
+      "assets/projects/collaborative/PyiHtaungSuMarket/PyiHtaungSuMarket_10.jpg"
+    ]
+  },
+  {
+    "image": "assets/projects/collaborative/GAL2400RCCWaterThrustle/GAL2400RCCWaterThrustle-Cover.jpg",
+    "title": "RCC Water Thrustle (10'x10'x30')",
+    "category": "collaborative",
+    "location": "Small-Scale Industries Dept, Monywa Township, Sagaing Region",
+    "description": "GAL 2400 RCC Water Thrustle - Collaborative Project with Social Home 2024",
+    "photos": [
+      "assets/projects/collaborative/GAL2400RCCWaterThrustle/GAL2400RCCWaterThrustle-01.jpg",
+      "assets/projects/collaborative/GAL2400RCCWaterThrustle/GAL2400RCCWaterThrustle-02.jpg",
+      "assets/projects/collaborative/GAL2400RCCWaterThrustle/GAL2400RCCWaterThrustle-03.jpg",
+      "assets/projects/collaborative/GAL2400RCCWaterThrustle/GAL2400RCCWaterThrustle-04.jpg",
+      "assets/projects/collaborative/GAL2400RCCWaterThrustle/GAL2400RCCWaterThrustle-05.jpg"
+    ]
+  },
+  {
+    "image": "assets/projects/collaborative/MyoMaMarket/MyoMaMarket-Cover.jpg",
+    "title": "Steel Structure Building (80'x60')",
+    "category": "collaborative",
+    "location": "Myo Ma Market, Sagaing City, Sagaing Region",
+    "description": "Collaborative Project with Social Home 2024 - Client: Sagaing Region Development Affairs Organization",
+    "photos": [
+      "assets/projects/collaborative/MyoMaMarket/MyoMaMarket-01.jpg",
+      "assets/projects/collaborative/MyoMaMarket/MyoMaMarket-02.jpg",
+      "assets/projects/collaborative/MyoMaMarket/MyoMaMarket-03.jpg",
+      "assets/projects/collaborative/MyoMaMarket/MyoMaMarket-04.jpg"
+    ]
+  },
+  {
+    "image": "assets/projects/residential/UYeYintHtoo/UYeYintHtoo-Cover.jpg",
+    "title": "Two Storeyed RCC Building (18'x56'x13')",
+    "category": "residential",
+    "location": "Kant Kaw Street, Bhone Soe Ward, Monywa Township",
+    "description": "Residential Project - Client: U Ye Yint Htoo",
+     "photos": [
+      "assets/projects/residential/UYeYintHtoo/UYeYintHtoo-01.jpg",
+      "assets/projects/residential/UYeYintHtoo/UYeYintHtoo-02.jpg",
+      "assets/projects/residential/UYeYintHtoo/UYeYintHtoo-03.jpg"
+    ]
+  },
+  {
+    "image": "assets/projects/consultant/UHtetKoKoAung/UHtetKoKoAung.jpg",
+    "title": "Three Storeyed RCC Building with Basement (17.5'x62'x12')",
+    "category": "consultant",
+    "location": "Lane (1), Bhone Soe Ward, Monywa Township, Sagaing Region",
+    "description": "Consultant Services Project - Client: U Htet Ko Ko Aung",
+    "photos": [
+      "assets/projects/consultant/UHtetKoKoAung/UHtetKoKoAung-01.jpg",
+      "assets/projects/consultant/UHtetKoKoAung/UHtetKoKoAung-02.jpg",
+      "assets/projects/consultant/UHtetKoKoAung/UHtetKoKoAung-03.jpg",
+      "assets/projects/consultant/UHtetKoKoAung/UHtetKoKoAung-04.jpg",
+      "assets/projects/consultant/UHtetKoKoAung/UHtetKoKoAung-05.jpg",
+      "assets/projects/consultant/UHtetKoKoAung/UHtetKoKoAung-06.jpg",
+      "assets/projects/consultant/UHtetKoKoAung/UHtetKoKoAung-07.jpg",
+      "assets/projects/consultant/UHtetKoKoAung/UHtetKoKoAung-08.jpg",
+      "assets/projects/consultant/UHtetKoKoAung/UHtetKoKoAung-09.jpg",
+      "assets/projects/consultant/UHtetKoKoAung/UHtetKoKoAung-10.jpg",
+      "assets/projects/consultant/UHtetKoKoAung/UHtetKoKoAung-11.jpg"
+    ]
+  }
+]

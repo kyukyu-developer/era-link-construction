@@ -1,0 +1,148 @@
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-header scroll-animate" appScrollAnimate>
+      <span class="section-tag">Portfolio</span>
+      <h2>Featured <span>Projects</span></h2>
+      <p>Explore our portfolio of landmark projects that showcase our expertise and commitment to excellence.</p>
+    </div>
+
+    <div class="project-filters scroll-animate" appScrollAnimate>
+      @for (filter of filters; track filter.key) {
+        <button class="filter-btn" [class.active]="activeFilter === filter.key"
+                (click)="setFilter(filter.key)">
+          {{ filter.label }}
+        </button>
+      }
+    </div>
+
+    <div class="projects-grid">
+      @for (project of filteredProjects; track project.title; let i = $index) {
+        <div class="project-card scroll-animate scale-in delay-{{ (i % 3) + 1 }}" appScrollAnimate
+             (click)="openProject(project)">
+          <div class="project-image">
+            <img [src]="project.image" [alt]="project.title">
+            <div class="project-overlay">
+              <span class="project-category">{{ project.category }}</span>
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.description }}</p>
+              <div class="project-location">
+                <i class="fas fa-map-marker-alt"></i>
+                {{ project.location }}
+              </div>
+              <div class="project-view-btn">
+                <i class="fas fa-eye"></i> View Details
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ── Project Detail Modal ─────────────────────────────────────────────── -->
+@if (selectedProject) {
+  <div class="modal-backdrop" (click)="closeProject()">
+    <div class="modal-panel" (click)="$event.stopPropagation()">
+
+      <!-- Header -->
+      <div class="modal-header">
+        <div class="modal-header__left">
+          <span class="modal-cat-badge">{{ selectedProject.category }}</span>
+          <h2 class="modal-title">{{ selectedProject.title }}</h2>
+        </div>
+        <button class="modal-close-btn" (click)="closeProject()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Cover + Info -->
+      <div class="modal-body">
+        <div class="modal-cover">
+          <img [src]="selectedProject.image" [alt]="selectedProject.title" class="modal-cover__img">
+          <span class="modal-cover__label">
+            <i class="fas fa-image"></i> Cover Photo
+          </span>
+        </div>
+
+        <div class="modal-info">
+          <div class="modal-info__item">
+            <div class="modal-info__icon"><i class="fas fa-tag"></i></div>
+            <div>
+              <span class="modal-info__label">Category</span>
+              <span class="modal-info__value">{{ selectedProject.category }}</span>
+            </div>
+          </div>
+          <div class="modal-info__item">
+            <div class="modal-info__icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <span class="modal-info__label">Location</span>
+              <span class="modal-info__value">{{ selectedProject.location }}</span>
+            </div>
+          </div>
+          <div class="modal-info__item">
+            <div class="modal-info__icon"><i class="fas fa-align-left"></i></div>
+            <div>
+              <span class="modal-info__label">Description</span>
+              <span class="modal-info__value">{{ selectedProject.description }}</span>
+            </div>
+          </div>
+          @if (selectedProject.photos?.length) {
+            <div class="modal-info__item">
+              <div class="modal-info__icon"><i class="fas fa-images"></i></div>
+              <div>
+                <span class="modal-info__label">Gallery</span>
+                <span class="modal-info__value">{{ selectedProject.photos.length }} photos</span>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Photo Gallery -->
+      @if (selectedProject.photos?.length) {
+        <div class="modal-gallery">
+          <h4 class="modal-gallery__heading">
+            <i class="fas fa-th"></i> Photo Gallery
+          </h4>
+          <div class="modal-gallery__grid">
+            @for (photo of selectedProject.photos; track photo; let j = $index) {
+              <div class="gallery-thumb" (click)="openLightbox(photo, j)">
+                <img [src]="photo" [alt]="selectedProject.title + ' photo ' + (j + 1)">
+                <div class="gallery-thumb__overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      }
+
+    </div>
+  </div>
+}
+
+<!-- ── Lightbox ─────────────────────────────────────────────────────────── -->
+@if (lightboxPhoto) {
+  <div class="lightbox" (click)="closeLightbox()">
+
+    <button class="lightbox__close" (click)="closeLightbox()">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <button class="lightbox__nav lightbox__nav--prev" (click)="$event.stopPropagation(); prevPhoto()">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <img [src]="lightboxPhoto" alt="Gallery photo" class="lightbox__img" (click)="$event.stopPropagation()">
+
+    <button class="lightbox__nav lightbox__nav--next" (click)="$event.stopPropagation(); nextPhoto()">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <div class="lightbox__counter" (click)="$event.stopPropagation()">
+      {{ lightboxIndex + 1 }} / {{ selectedProject?.photos?.length }}
+    </div>
+
+  </div>
+}

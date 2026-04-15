@@ -1,0 +1,58 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo">
+          <img src="logo.png" alt="ERA LINK Logo" class="logo-img">
+          <span>ERA <strong>LINK</strong></span>
+        </a>
+        <p>From your dream, built to shine in every era. ERA LINK delivers design and construction excellence in Monywa and beyond.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          @for (link of quickLinks; track link.label) {
+            <li><a [href]="link.href"><i class="fas fa-chevron-right"></i> {{ link.label }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          @for (service of services; track service) {
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> {{ service }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Subscribe to get the latest news and project updates from ERA LINK.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address">
+          <button class="btn-primary">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ currentYear }} ERA LINK Construction. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
